@@ -1,0 +1,66 @@
+.m-menu {
+  @include outer-container;
+  padding: 0 $page-gutter;
+
+  .logo {
+    float: left;
+    padding: 0.5em 0;
+
+    img {
+      display: block;
+      width: auto;
+      width: 6.75em;
+    }
+  }
+
+  .toggle {
+    float: right;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    clear: both;
+    display: none;
+    text-align: center;
+  }
+
+  li {
+    display: block;
+    margin: 0;
+  }
+
+  .toggle a,
+  li a {
+    display: block;
+    padding: 0.75em 1em;
+    color: $white;
+    font-size: 1.25em;
+
+    &:hover {
+      background: $blue;
+    }
+  }
+
+  @include media-ie($breakpoint-desktop) {
+    .logo {
+      margin-right: 1em;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      float: left;
+      clear: none;
+      display: block !important;
+      text-align: left;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+}

@@ -61,24 +61,22 @@
   
   
   %body
-    /[if lt IE 9]
-      .wrap.outdated-browser
-        %div
-          %p
-            %a.close{ href: "#" } x
-            You are using an <strong>outdated</strong> browser. Please 
-            %a{ href: "http://browsehappy.com/", target: '_blank' } upgrade your browser or
-            %a{ href: "http://www.google.com/chromeframe/?redirect=true", target: '_blank' } activate Google Chrome Frame
-            to improve your experience.
+
+    %nav.l-nav
+      .m-menu
+        .logo
+          = link_to "#intro" do
+            = image_tag "logo.png"
+        .toggle= link_to "Menu", "#menu", data: {behavior: "toggle"}
+        %ul#menu
+          %li= link_to "Welcome", "#welcome"
+          %li= link_to "Dr. Stamps", "#dr-stamps"
+          %li= link_to "For Patients", "#for-patients"
+          %li= link_to "Referring Physician", "#referring-physician"
+          %li= link_to "Contact", "#contact"
 
 
-    %header#layout-header
-      
-      
     = yield
-    
-    
-    %footer#layout-footer
     
     
     
