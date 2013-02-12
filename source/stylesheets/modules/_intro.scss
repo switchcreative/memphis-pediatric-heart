@@ -1,0 +1,39 @@
+.m-intro {
+  position: relative;
+
+  .bg {
+    width: 100%;
+  }
+
+  .logo {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .contact {
+    @include clearfix;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    width: 100%;
+    padding: 0 $page-gutter;
+    color: $white;
+
+    a {
+      float: right;
+      font-size: 1.5em;
+      &:first-child { float: left; }
+    }
+  }
+
+  @include media($breakpoint-ipad) {
+    .contact a { font-size: 3em; }
+  }
+}

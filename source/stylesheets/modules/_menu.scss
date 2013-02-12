@@ -9,7 +9,7 @@
     img {
       display: block;
       width: auto;
-      width: 6.75em;
+      width: 4.75em;
     }
   }
 
@@ -22,6 +22,7 @@
     list-style: none;
     clear: both;
     display: none;
+    margin: 0;
     text-align: center;
   }
 
@@ -33,7 +34,7 @@
   .toggle a,
   li a {
     display: block;
-    padding: 0.75em 1em;
+    padding: 0.4em 1em;
     color: $white;
     font-size: 1.25em;
 
@@ -45,6 +46,7 @@
   @include media-ie($breakpoint-desktop) {
     .logo {
       margin-right: 1em;
+      img { width: 6.75em; }
     }
 
     .toggle {
@@ -61,6 +63,11 @@
 
     li {
       display: inline-block;
+    }
+
+    .toggle a,
+    li a {
+      padding: 0.75em 0.9em;
     }
   }
 }
