@@ -1,0 +1,10 @@
+.m-welcome {
+  padding: 3em 0;
+  background: $blue;
+  color: $white;
+
+  p {
+    @include column-count(2);
+    @include column-gap(3em);
+  }
+}
