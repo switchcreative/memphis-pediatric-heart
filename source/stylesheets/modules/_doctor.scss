@@ -1,0 +1,53 @@
+.m-doctor {
+  padding: 3em 0;
+
+  h1,
+  h2 {
+    color: $blue;
+  }
+}
+
+.m-dr-stamps {
+  @include row;
+  margin-bottom: 2em;
+
+  img {
+    display: block;
+    width: 100%;
+    border: 3px solid #eee;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    .photo,
+    .about {
+      @include span-columns(6);
+    }
+  }
+}
+
+.m-bio {
+  h2 { margin: 0.75em 0; }
+}
+
+.m-history {
+  table { width: 100%; }
+
+  td {
+    padding: 0 0 0.5em;
+    border: none;
+    font-size: 0.875em;
+
+    &:first-child {
+      padding-right: 1em;
+    }
+  }
+
+  .company td {
+    padding-bottom: 2em;
+    color: $blue;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    @include span-columns(6);
+  }
+}

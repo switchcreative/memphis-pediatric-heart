@@ -3,8 +3,10 @@
   background: $blue;
   color: $white;
 
-  p {
-    @include column-count(2);
-    @include column-gap(3em);
+  @include media-ie($breakpoint-ipad) {
+    p {
+      @include column-count(2);
+      @include column-gap(3em);
+    }
   }
 }

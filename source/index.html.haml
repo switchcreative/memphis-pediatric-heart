@@ -1,3 +1,4 @@
+-# Intro
 .m-intro#intro
   = image_tag "hands.jpg", class: "bg"
   .logo= image_tag "full-logo.png"
@@ -6,5 +7,26 @@
       = link_to icon("e001"), "#"
       = link_to icon("e000"), "#"
 
+-# Welcome
 .m-welcome#welcome
   .l-constrained= partial "content/welcome"
+
+-# Doctor
+.m-doctor#dr-stamps
+  .l-constrained
+    .m-dr-stamps
+      .photo= image_tag "kevin-stamps.jpg"
+      .about= partial "content/stamps"
+    .m-bio
+      %h2 Professional Biography
+      - if data.professional_biography
+        - data.professional_biography.take(2).each do |set|
+          .m-history
+            %table
+              %tbody
+                - set.each do |item|
+                  %tr
+                    %td= item.title
+                    %td= item.dates
+                  %tr.company
+                    %td{ colspan: "2" }= item.company
