@@ -30,3 +30,10 @@
                     %td= item.dates
                   %tr.company
                     %td{ colspan: "2" }= item.company
+
+-# Patients
+.m-patients#for-patients
+  .bg= image_tag "girl.jpg"
+  .l-constrained
+    .content= partial "content/patients1"
+    .content= partial "content/patients2"
