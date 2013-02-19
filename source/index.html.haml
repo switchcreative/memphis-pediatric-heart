@@ -2,14 +2,15 @@
 .m-intro#intro
   = image_tag "hands.jpg", class: "bg"
   .logo= image_tag "full-logo.png"
-  .contact
+  .m-actions
     .l-constrained
-      = link_to icon("e001"), "#"
-      = link_to icon("e000"), "#"
+      = link_to icon("e001"), "tel:9012592440"
+      = mail_to "kstamps@mpheart.com", icon("e000")
 
 -# Welcome
 .m-welcome#welcome
-  .l-constrained= partial "content/welcome"
+  .l-constrained
+    = partial "content/welcome"
 
 -# Doctor
 .m-doctor#dr-stamps
@@ -37,3 +38,38 @@
   .l-constrained
     .content= partial "content/patients1"
     .content= partial "content/patients2"
+
+-# Referring Physicians
+.m-physicians#referring-physician
+  .l-constrained
+    = partial "content/referring_physicians"
+
+-# Contact
+.m-contact#contact
+  .l-constrained
+    %h1 Contact
+    .info
+      %table
+        %tbody
+          %tr
+            %td
+              6215 Humphreys Blvd., STE 211
+              %br
+              Memphis, TN 38120
+            %td
+              ph
+              %br
+              fx
+            %td
+              = link_to "901.259.2440", "tel:9012592440"
+              %br
+              901.259.2444
+
+-# Map
+.m-map
+  #map-canvas.map
+  .m-actions
+    .l-constrained
+      = link_to icon("e001"), "tel:9012592440"
+      = mail_to "kstamps@mpheart.com", icon("e000")
+  .copyright &reg; 2013 MPHeart.com

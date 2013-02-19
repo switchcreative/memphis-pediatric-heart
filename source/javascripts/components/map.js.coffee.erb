@@ -1,0 +1,111 @@
+mapStyles = [
+  # Roads
+  # 
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "color": "#9bf3fe" }
+    ]
+  },
+  # Road Labels
+  # 
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      { "color": "#82e6fe" }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "color": "#f7fcff" }
+    ]
+  },
+  # Land
+  # 
+  {
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#f7fcff" }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      { "color": "#e7faff" }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      { "color": "#f7fcff" }
+    ]
+  }
+]
+
+class GoogleMap
+
+  constructor: (@google, @coordinates, @mapStyles)->
+    # Create LatLng object from coords
+    @location = @latLng( coordinates.lat, coordinates.lng )
+    # Create Map object
+    map = @createMap()
+    # Create Marker object & add to map
+    marker = @createMarker(@location)
+    marker.setMap( map )
+
+
+  latLng: (lat, lng)=>
+    new @google.maps.LatLng(lat, lng)
+
+  
+  options: =>
+    center: @location
+    zoom: 15
+    mapTypeId: @google.maps.MapTypeId.ROADMAP
+    styles: @mapStyles
+    streetViewControl: false
+    mapTypeControl: false
+    panControl: false
+    zoomControlOptions:
+      style: "SMALL"
+      position: @google.maps.ControlPosition.TOP_LEFT
+    scrollwheel: false
+
+    
+  createMap: =>
+    new @google.maps.Map( document.getElementById('map-canvas'), @options() )
+
+  
+  createMarker: (location)=>
+    image =
+      url: "<%= image_path('map-marker.png') %>"
+      scaledSize: new @google.maps.Size(50,50)
+      anchor: new @google.maps.Point(25,25)
+    new @google.maps.Marker
+      position: location
+      icon: image
+      animation: @google.maps.Animation.DROP
+
+
+  createInfoWindow: (marker, content)=>
+    new @google.maps.InfoWindow
+      content: content
+
+
+
+
+jQuery ->
+
+  coordinates =
+    lat: 35.127594
+    lng: -89.8560308
+  map = new GoogleMap( google, coordinates, mapStyles )

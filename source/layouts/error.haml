@@ -45,8 +45,6 @@
     -# koko wa HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "html5"
-    
-    = stylesheet_link_tag "application", media: "all"
 
     -# koko wa CSS3 polyfill, IE6-8 support of CSS3 pseudo-classes with Selectivizr
     /[if lt IE 9]
@@ -57,28 +55,52 @@
     / :javascript
     /   try{Typekit.load();}catch(e){}
 
-    -# koko wa Google Maps
-    %script{ type: "text/javascript", src: "http://maps.googleapis.com/maps/api/js?sensor=true&keykey=AIzaSyA67Zko6Iz75NXQZK0aHfyjU0ncjd913Zk" }
+    :css
+      * {
+        -webkit-font-smoothing: antialiased !important;
+        border: none;
+      }
+
+      body {
+        padding: 1em 0 0 !important;
+        background: #5db8cf;
+        color: #fff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0.5em 0;
+        color: #fff;
+        font-size: 2em;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0 0 1em;
+        font-size: 1em;
+      }
+
+      a {
+        color: #fff;
+      }
+
+      .m-logo {
+        width: 100%;
+        max-width: 12.5em;
+        margin: 1em auto 2em;
+      }
+
+      .m-logo img {
+        display: block;
+        width: 100%;
+      }
   
   
   
   
   %body
-
-    %nav#nav.l-nav
-      .m-menu
-        .logo
-          = link_to "#intro" do
-            = image_tag "logo.png"
-        .toggle= link_to "Menu", "#menu", data: {behavior: "toggle:class"}
-        %ul#menu
-          %li= link_to "Welcome", "#welcome"
-          %li= link_to "Dr. Stamps", "#dr-stamps"
-          %li= link_to "For Patients", "#for-patients"
-          %li= link_to "Referring Physician", "#referring-physician"
-          %li= link_to "Contact", "#contact"
-
-
     = yield
     
     
@@ -86,10 +108,6 @@
 
     
     
-    
-    
-    -# koko wa javascript
-    = javascript_include_tag "application"
     
     
     - unless development?

@@ -1,0 +1,43 @@
+.m-map {
+  position: relative;
+  width: 100%;
+  background: $blue;
+
+  .map {
+    height: 17.5em;
+  }
+
+  .m-actions {
+    @include clearfix;
+    position: absolute;
+    bottom: 2em;
+    left: 0;
+    width: 100%;
+    padding: 0 $page-gutter;
+    color: $pink;
+
+    a {
+      float: right;
+      font-size: 2em;
+
+      &:first-child {
+        float: left;
+      }
+    }
+  }
+
+
+  .copyright {
+    position: absolute;
+    bottom: 2em;
+    left: 0;
+    width: 100%;
+    font-size: 0.75em;
+    text-align: center;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    .copyright { bottom: 1em; }
+    .m-actions a { font-size: 3em };
+  }
+}

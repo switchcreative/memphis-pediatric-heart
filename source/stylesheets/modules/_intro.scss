@@ -18,7 +18,7 @@
     }
   }
 
-  .contact {
+  .m-actions {
     @include clearfix;
     position: absolute;
     bottom: 1em;
@@ -30,11 +30,14 @@
     a {
       float: right;
       font-size: 1.5em;
-      &:first-child { float: left; }
-    }
-  }
 
-  @include media($breakpoint-ipad) {
-    .contact a { font-size: 3em; }
+      &:first-child {
+        float: left;
+      }
+
+      @include media($breakpoint-ipad) {
+        font-size: 3em;
+      }
+    }
   }
 }

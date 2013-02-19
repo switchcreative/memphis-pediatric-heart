@@ -1,5 +1,5 @@
 # Toggle hide/show
-$(document).on "click", "[data-behavior='toggle']", (event) ->
+$(document).on "click", "[data-behavior='toggle:class']", (event) ->
   event.preventDefault()
   $target = $( $(@).attr("href") )
-  $target.toggle()
+  $target.toggleClass("is-active")

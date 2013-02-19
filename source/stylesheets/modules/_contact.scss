@@ -1,0 +1,39 @@
+.m-contact {
+  @include row;
+  padding: 3em 0;
+
+  .info {
+    margin-top: 1em;
+
+    table {
+      width: 100%;
+      font-size: 0.75em;
+    }
+
+    td {
+      vertical-align: top;
+      padding: 0 0.5em 0 0;
+      border: none;
+    }
+  }
+
+  @include media(480px) {
+    .info table {
+      font-size: 1em;
+    }
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    h1 {
+      @include span-columns(4);
+    }
+
+    .info {
+      @include span-columns(8);
+
+      table {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
