@@ -3,4 +3,5 @@ body {
   color: $grey;
   font-family: $typeface-sans;
   text-shadow: 1px 1px 1px transparent;
+  @include ie-width;
 }
