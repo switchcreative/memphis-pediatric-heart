@@ -1,0 +1,1 @@
+(function(){$(document).on("click","[data-behavior='toggle:class']",function(e){var t;return e.preventDefault(),t=$($(this).attr("href")),t.toggleClass("is-active")})}).call(this);
