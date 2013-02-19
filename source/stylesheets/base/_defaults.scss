@@ -1,7 +1,12 @@
 // Basic Elements
 body {
   color: $grey;
+  font-size: 100%;
   font-family: $typeface-sans;
   text-shadow: 1px 1px 1px transparent;
   @include ie-width;
+
+  @include media-ie($breakpoint-desktop) {
+    font-size: 120%;
+  }
 }
