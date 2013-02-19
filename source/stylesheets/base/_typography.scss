@@ -1,5 +1,5 @@
 // Typefaces
-$typeface-sans:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typeface-sans:  "proxima-nova-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $typeface-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 
 a {
@@ -49,8 +49,8 @@ h6 {}
 
 p,
 ul {
-  font-size: 0.875em;
-  line-height: 1.7;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 hr {}

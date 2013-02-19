@@ -28,8 +28,8 @@
     %title= [yield_content(:title), "Memphis Pediatric Heart"].reject(&:blank?).join(' | ')
     
     -# koko wa general meta
-    %meta{name: "description", content: "FIXME: APPLICATION DESCRIPTION"}
-    %meta{name: "author", content: "Michael LaCroix, James LaCroix"}
+    %meta{name: "description", content: ""}
+    %meta{name: "author", content: "Michael Carpenter, Michael LaCroix"}
     %meta{:'http-equiv' => "X-UA-Compatible", content: "chrome=1"}
     
     -# koko wa fav and touch icons (reside in the /public folder), plus iOS meta
@@ -53,9 +53,9 @@
       = javascript_include_tag "polyfills"
     
     -# koko wa Typekit -- replace VVVVVVV with the proper kit code
-    / %script{ type: "text/javascript", src: "//use.typekit.net/VVVVVVV.js" }
-    / :javascript
-    /   try{Typekit.load();}catch(e){}
+    %script{ type: "text/javascript", src: "//use.typekit.net/hne1eyy.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
 
     -# koko wa Google Maps
     %script{ type: "text/javascript", src: "http://maps.googleapis.com/maps/api/js?sensor=true&keykey=AIzaSyA67Zko6Iz75NXQZK0aHfyjU0ncjd913Zk" }
@@ -69,7 +69,7 @@
       .m-menu
         .logo
           = link_to "#intro" do
-            = image_tag "logo.png"
+            = image_tag "logo-condensed.png"
         .toggle= link_to "Menu", "#menu", data: {behavior: "toggle:class"}
         %ul#menu
           %li= link_to "Welcome", "#welcome"
@@ -93,16 +93,30 @@
     
     
     - unless development?
-      -# koko wa Google Analytics -- replace VVVVVVVV-V with the proper code
+      -# koko wa Google Analytics
       :javascript
         var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-VVVVVVVV-V']);
+        _gaq.push(['_setAccount', 'UA-32827207-6']);
         _gaq.push(['_trackPageview']);
         
         (function() {
           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      -# koko wa Gauges Tracking
+      :javascript
+        var _gauges = _gauges || [];
+        (function() {
+          var t   = document.createElement('script');
+          t.type  = 'text/javascript';
+          t.async = true;
+          t.id    = 'gauges-tracker';
+          t.setAttribute('data-site-id', '5111ae60f5a1f5404b000012');
+          t.src = '//secure.gaug.es/track.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(t, s);
         })();
 
 
