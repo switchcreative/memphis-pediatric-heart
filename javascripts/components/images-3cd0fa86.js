@@ -1,0 +1,1 @@
+(function(){$.fn.asyncImageLoad=function(){return $(this).each(function(){var e,t;e=$(this),t=e.data("src");if(t)return e.imagesLoaded(e.fadeIn(1e3)).attr("src",t)})},jQuery(function(){return $("[data-behavior='delayedImage']").asyncImageLoad()})}).call(this);
