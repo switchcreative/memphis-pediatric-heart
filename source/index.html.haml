@@ -1,6 +1,6 @@
 -# Intro
 .m-intro#intro
-  = image_tag "hands.jpg", class: "bg"
+  .bg= image_tag "hands.jpg"
   .logo= image_tag "logo-full.png"
   .m-actions
     .l-constrained
@@ -16,7 +16,8 @@
 .m-doctor#dr-stamps
   .l-constrained
     .m-dr-stamps
-      .photo= image_tag "kevin-stamps.jpg"
+      .photo
+        %img{ data: {behavior: "delayedImage", src: image_path("kevin-stamps.jpg")} }
       .about= partial "content/stamps"
     .m-bio
       %h2 Professional Biography
@@ -34,7 +35,8 @@
 
 -# Patients
 .m-patients#for-patients
-  .bg= image_tag "girl.jpg"
+  .bg
+    %img{ data: {behavior: "delayedImage", src: image_path("girl.jpg")} }
   .l-constrained
     .m-content= partial "content/patients1"
     .m-content= partial "content/patients2"
