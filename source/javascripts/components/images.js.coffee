@@ -2,7 +2,6 @@
 $.fn.asyncImageLoad = ->
   $(@).each ->
     $this = $(@)
-    $this.hide()
     src = $this.data("src")
     if src
       $this.imagesLoaded(

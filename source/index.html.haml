@@ -17,7 +17,7 @@
   .l-constrained
     .m-dr-stamps
       .photo
-        %img{ data: {behavior: "delayedImage", src: image_path("kevin-stamps.jpg")} }
+        = async_image image_path("kevin-stamps.jpg")
       .about= partial "content/stamps"
     .m-bio
       %h2 Professional Biography
@@ -36,7 +36,7 @@
 -# Patients
 .m-patients#for-patients
   .bg
-    %img{ data: {behavior: "delayedImage", src: image_path("girl.jpg")} }
+    = async_image image_path("girl.jpg")
   .l-constrained
     .m-content= partial "content/patients1"
     .m-content= partial "content/patients2"

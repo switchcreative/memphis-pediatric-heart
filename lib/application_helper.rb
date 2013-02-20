@@ -29,6 +29,15 @@ module ApplicationHelper
   end
   
 
+  # Markup for async images with noscript fallback
+  # 
+  def async_image img
+    el =  "<img data-behavior='delayedImage' data-src='#{img}' style='display:none;'>"
+    el += "<noscript><img src='#{img}'></noscript>"
+    el
+  end
+  
+
   # Date: November 5, 2013
   # 
   def date_full(date)
