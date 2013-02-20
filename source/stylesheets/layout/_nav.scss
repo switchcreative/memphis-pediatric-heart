@@ -6,6 +6,10 @@
   width: 100%;
   border-bottom: 1px solid darken($blue, 5%);
   background: $blue;
-  background: rgba(93,184,207, 0.9);
+  background: rgba(93,184,207, 0.95);
   @include ie-width;
+
+  @include media-ie($breakpoint-desktop) {
+    background: rgba(93,184,207, 0.9);
+  }
 }

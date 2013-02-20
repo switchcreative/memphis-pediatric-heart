@@ -16,6 +16,9 @@
   .toggle {
     float: right;
     text-transform: uppercase;
+    padding: 0.6em 0 0.4em;
+    color: $white;
+    font-size: 1.25em;
   }
 
   ul {
@@ -32,12 +35,11 @@
     margin: 0;
   }
 
-  .toggle a,
   li a {
     display: block;
-    padding: 0.4em 1em;
+    padding: 0.2em 1em;
     color: $white;
-    font-size: 1.25em;
+    font-size: 1.5em;
 
     &:hover {
       background: $blue;
@@ -73,9 +75,9 @@
       display: inline-block;
     }
 
-    .toggle a,
     li a {
       padding: 0.75em 0.9em;
+      font-size: 1.25em;
     }
   }
 }

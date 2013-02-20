@@ -28,7 +28,7 @@
                 - set.each do |item|
                   %tr
                     %td= item.title
-                    %td= item.dates
+                    %td.dates= item.dates
                   %tr.company
                     %td{ colspan: "2" }= item.company
 
@@ -36,8 +36,8 @@
 .m-patients#for-patients
   .bg= image_tag "girl.jpg"
   .l-constrained
-    .content= partial "content/patients1"
-    .content= partial "content/patients2"
+    .m-content= partial "content/patients1"
+    .m-content= partial "content/patients2"
 
 -# Referring Physicians
 .m-physicians#referring-physician

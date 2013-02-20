@@ -9,7 +9,10 @@
 
 .m-dr-stamps {
   @include row;
-  margin-bottom: 2em;
+
+  .photo {
+    margin-bottom: 1em;
+  }
 
   img {
     display: block;
@@ -25,20 +28,21 @@
   }
 }
 
-.m-bio {
-  h2 { margin: 0.75em 0; }
-}
-
 .m-history {
   table { width: 100%; }
 
   td {
+    vertical-align: top;
     padding: 0 0 0.5em;
     border: none;
     font-size: 0.875em;
 
     &:first-child {
       padding-right: 1em;
+    }
+
+    &.dates {
+      white-space: nowrap;
     }
   }
 

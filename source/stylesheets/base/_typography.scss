@@ -11,7 +11,9 @@ p, a, h1, h2, h3, h4, h5, label {
 }
 
 h1 {
+  margin-bottom: 0.2em;
   font-size: 3em;
+  line-height: 1.15;
   font-weight: normal;
   @include media-ie($breakpoint-desktop) {
     font-size: 4.5em;
@@ -19,7 +21,9 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 0.5em;
   font-size: 1.5em;
+  line-height: 1.25;
   font-weight: normal;
   @include media-ie($breakpoint-desktop) {
     font-size: 2.25em;
@@ -27,7 +31,9 @@ h2 {
 }
 
 h3 {
+  margin-bottom: 0.75em;
   font-size: 1.25em;
+  line-height: 1.25;
   font-weight: normal;
   text-transform: uppercase;
   @include media-ie($breakpoint-desktop) {
@@ -36,12 +42,16 @@ h3 {
 }
 
 h4 {
+  margin-bottom: 0.2em;
   font-size: 1.3125em;
+  line-height: 1.25;
   font-weight: normal;
 }
 
 h5 {
+  margin-bottom: 0.2em;
   font-size: 1.3125em;
+  line-height: 1.25;
   font-weight: normal;
 }
 
@@ -51,6 +61,14 @@ p,
 ul {
   font-size: 1em;
   line-height: 1.5;
+}
+
+ul {
+  margin-top: 0.5em;
+}
+
+li {
+  margin-bottom: 0.25em;
 }
 
 hr {}

@@ -23,7 +23,7 @@
   }
 
   @include media-ie($breakpoint-ipad) {
-    .content {
+    .m-content {
       @include span-columns(6);
     }
   }

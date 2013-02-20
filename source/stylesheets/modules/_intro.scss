@@ -1,9 +1,12 @@
 .m-intro {
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 
   .bg {
     display: block;
-    width: 100%;
+    width: 150%;
+    margin-left: -25%;
   }
 
   .logo {
@@ -13,8 +16,19 @@
 
     img {
       display: block;
-      width: 50%;
+      width: 75%;
       margin: 0 auto;
+    }
+  }
+
+  @include media-ie(480px) {
+    .bg {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .logo img {
+      width: 50%;
     }
   }
 
@@ -24,15 +38,18 @@
     bottom: 1em;
     left: 0;
     width: 100%;
-    padding: 0 $page-gutter;
     color: $white;
 
     a {
       float: right;
-      font-size: 1.5em;
+      font-size: 2em;
 
       &:first-child {
         float: left;
+      }
+
+      &:hover {
+        color: $pink;
       }
 
       @include media($breakpoint-ipad) {
