@@ -7,8 +7,13 @@ Heart disease in children is often thought to be a rare occurrence. However, man
 ### Common reasons for referral to see a pediatric cardiologist include the following:
 
 ##### Heart murmur
+
 ##### Chest pain with or without exercise
+
 ##### Syncope (fainting)
+
 ##### Hypertension (high blood pressure)
+
 ##### Palpitations/tachycardia (fast heart rate)
+
 ##### Congenital heart disease
